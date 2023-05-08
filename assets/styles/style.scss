@@ -121,7 +121,6 @@ header {
 }
 
 #hero {
-  min-height: 100vh;
   width: 100%;
   padding: 100px 0px;
 
@@ -151,6 +150,9 @@ header {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
+  }
+  p.ca {
+    word-break: break-all;
   }
   a.button {
     background-color: var(--first-clr);
