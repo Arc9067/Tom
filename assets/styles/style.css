@@ -167,7 +167,7 @@ header img {
 
 #about {
   width: 100%;
-  background-color: rgb(255, 0, 80);
+  background-color: #ff0050;
   padding-block: 50px;
 }
 #about h1.title {
@@ -201,4 +201,12 @@ header img {
 }
 #buy iframe {
   max-width: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--first-clr);
+  padding-block: 15px;
+  color: #fff;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
