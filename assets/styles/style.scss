@@ -1,29 +1,24 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== FONTS CSS =====*/
+
+/*===== FONTS CSS =====*/
+
 /*===== VARIABLES CSS =====*/
-
-@font-face {
-  font-family: Main;
-  src: url(../img/MS_PAIN.ttf);
-  font-style: normal;
-}
-
 :root {
-  --header-height: 3rem;
+  --header-height: 5rem;
   --font-semi: 600;
   /*===== Colores =====*/
-  --first-color: #04a702;
-  --second-color: ;
-  --body-clr: #000;
+  --first-clr: #281e3c;
+  --black: black;
+  --body-bg: #ffffff;
   /*===== Fuente y tipografia =====*/
-  --body-font: "Roboto", sans-serif;
-  --Main-font: Main;
+  --body-font: "Work Sans", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --smaller-font-size: 0.75rem;
-  --white: #fff;
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
@@ -42,7 +37,6 @@
     --smaller-font-size: 0.875rem;
   }
 }
-
 /*===== BASE =====*/
 *,
 ::before,
@@ -55,12 +49,15 @@ html {
 }
 
 body {
-  font-family: var(--Main-font), sans-serif;
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: #000;
-  background: var(--body-clr);
-  height: 100vh;
-  // padding-inline: 1em;
+  color: var(--first-clr);
+  background-color: var(--body-bg);
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 h1,
@@ -76,7 +73,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 img {
@@ -85,192 +82,82 @@ img {
   display: block;
 }
 
+::selection {
+  background-color: #fff;
+  color: var(--body-bg);
+}
 /*===== CLASS CSS ===== */
-
 a.button {
-  padding: 16px 32px;
-  background: #2f8ac4;
-  border-radius: 1000px;
-  color: var(--white);
+  padding: 16.066px 29.6604px;
+  background: #8bc02d;
+  border-radius: 18px;
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  width: max-content;
+  display: block;
 }
 
 header {
+  width: 10%;
+  // background-color: red;
   padding-block: 10px;
-  width: 100%;
-  background-color: var(--body-clr);
-  // position: relative;
-  // height: 50px;
-  position: fixed;
-  z-index: var(--z-fixed);
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
 
-  .menu {
-    font-size: 40px;
-    cursor: pointer;
-    @media (min-width: 700px) {
-      display: none;
-    }
+  a.button {
+    padding: 16.066px 29.6604px;
+    background: #8bc02d;
+    border-radius: 18px;
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
   }
-
-  nav {
-    li {
-      a {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 28px;
-        color: #000000;
-      }
-    }
-  }
-
-  @media (max-width: 700px) {
-    nav {
-      ul {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        height: 0px;
-        overflow: hidden;
-        padding-block: 0px;
-        background-color: var(--body-clr);
-        width: 100%;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        transition: all 0.3s linear;
-
-        li {
-          width: 100%;
-          text-align: center;
-          padding-block: 10px;
-        }
-      }
-      .open-nav {
-        height: 300px;
-        padding-block: 20px 0;
-      }
-    }
+  img {
+    width: 3rem;
   }
 }
 
 #hero {
+  min-height: 100vh;
   width: 100%;
-  background-color: var(--first-color);
-  // padding-block: 4rem;
+  padding: 100px 0px;
 
-  .row {
-    h1.title {
-      font-weight: 400;
-      font-size: 100px;
-      line-height: 116px;
-
-      @media (max-width: 1000px) {
-        font-size: 54px;
-        line-height: 63px;
-      }
-    }
-    max-width: 1500px;
-    margin-inline: auto;
-    div {
-      padding-block: 100px;
-      padding-inline: 20px;
-      min-height: 600px;
-    }
-    div:nth-child(2) {
-      background-color: #00b0a5;
-    }
+  .logo {
+    width: 25rem;
   }
-}
 
-main {
-  width: 100%;
+  h1.title {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 84px;
 
-  #about {
-    width: 100%;
-    padding-block: 50px;
-
-    .inner:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #000000;
-      border-radius: 20px;
-      position: absolute;
-      bottom: 10px;
-      z-index: -1;
-    }
-
-    .inner {
-      min-height: 300px;
-      width: 95%;
-      background-color: var(--first-color);
-      border-radius: 20px;
-      position: relative;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      padding-block: 20px;
-
-      img {
-        width: 244px;
-      }
-
-      h1 {
-        font-size: 48px;
-        line-height: 56px;
-
-        @media (max-width: 700px) {
-          font-size: 30px;
-          line-height: 35px;
-        }
-      }
-
-      @media (min-width: 1000px) {
-        width: 1200px;
-      }
-    }
-  }
-}
-
-#tokenomics {
-  width: 100%;
-  padding-block: 50px;
-
-  .txt {
     span {
-      width: 43.68px;
-      height: 42px;
-      display: inline-block;
+      color: #8bc02d;
     }
-    .span1 {
-      background: #84b5fb;
-    }
-    .span2 {
-      background: #ff9e5e;
-    }
-    .span3 {
-      background: #91de7b;
-    }
-    .span4 {
-      background: #da62a1;
+
+    @media (max-width: 700px) {
+      font-size: 45px;
+      line-height: 120%;
     }
   }
-}
-#buy {
-  width: 100%;
-  padding-block: 50px;
-}
-
-footer {
-  width: 100%;
-  padding-block: 20px;
-
   p {
-    font-size: 24px;
-    line-height: 28px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  a.button {
+    background-color: var(--first-clr);
+  }
+  a.button:last-child {
+    background-color: transparent;
+    border: 2px solid #281e3c;
+    color: var(--first-clr);
   }
 }
