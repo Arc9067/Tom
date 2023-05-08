@@ -163,4 +163,33 @@ header img {
   background-color: transparent;
   border: 2px solid #281e3c;
   color: var(--first-clr);
+}
+
+#about {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 0, 80);
+  padding-block: 50px;
+}
+#about h1.title {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 84px;
+  color: #ffffff;
+}
+@media (max-width: 700px) {
+  #about h1.title {
+    font-size: 42px;
+    line-height: 120%;
+  }
+}
+#about p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
